@@ -18,7 +18,17 @@ The app serves at `http://localhost:8000`. FastAPI interactive docs are at `http
 
 **Required:** A `.env` file in the repo root with `ANTHROPIC_API_KEY=...` (see `.env.example`).
 
-There are no tests and no linter configured.
+### Code quality
+
+```bash
+# Auto-format backend/ and main.py with black
+./scripts/format.sh
+
+# Check formatting only, no changes (exits non-zero on violations; use in CI)
+./scripts/check.sh
+```
+
+Black is configured in `pyproject.toml` under `[tool.black]` (line-length 88). There are no tests and no other linter configured.
 
 ## Architecture
 
